@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="sidebard.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="sidebar">
+      <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+           <div class="logo_name">Gestion de tâches</div>
+          <i class='bx bx-menu' id="btn" ></i>
+       </div>
+       <ul class="nav-list">
+           <li>
+               <a href="#accueil" class="alan">
+               <i class=" bx bxs-up-arrow"></i>
+               <span class="links_name">Accueil</span>
+               </a>
+               <span class="tooltip">Accueil</span>
+          </li>
+           <li>
+                <a href="#taches"  class="alan">
+                <i class='bx bxs-cart-add'></i>
+                <span class="links_name">Tâches</span>
+                 </a>
+                <span class="tooltip">Tâches</span>
+           </li>
+           <li>
+                 <a href="#ajouter"  class="alan">
+               <i class='bx bx-chat' ></i>
+               <span class="links_name">Ajouter</span>
+               </a>
+               <span class="tooltip">Ajouter</span>
+          </li>
+          <li>
+                <a href="#"  class="alan">
+                <i class='bx bx-pie-chart-alt-2' ></i>
+                <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+          </li>
+    
+        </ul>
+  </div>
+     <section class="accueil-section" id="accueil">
+      <div class=" info">
+          <div class="text">
+            <div class="lignes">
+              <div class="l1"><h4> <span>wellcome</span></h4>      <h4><span> on</span></h4> <h4><span>our</span></h4> </div>
+              <div class="l2"><h4><span>site</span></h4> </div>
+          </div>
+      
+          <div class="container-first">
+              <h4>
+                <span>le </span>
+                <span>meilleur</span>
+                <span>outil </span>
+                <span>pour </span>
+                <span>planifier </span>
+                <span>et</span>
+                <span>gérer</span>
+                <span>vos</span>
+                <span>projets</span>
+
+                 </h4>
+              
+          </div>
+      
+        </div>
+          </div>
+          <div class="info-clock">
+          <div class="clock ">
+            <div class="numbers">
+                <div class="cercle" id="sec" style="--clr:#04fc43;"><i></i></div>
+                <div class="cercle" id="min" style="--clr:#fee800;"><i></i></div>
+                <div class="cercle" id="her" style="--clr:#ff2972;"><i></i></div>
+                <span style="--i:0"><b>12</b></span>
+                <span style="--i:1"><b>1</b></span>
+                <span style="--i:2"><b>2</b></span>
+                <span style="--i:3"><b>3</b></span>
+                <span style="--i:4"><b>4</b></span>
+                <span style="--i:5"><b>5</b></span>
+                <span style="--i:6"><b>6</b></span>
+                <span style="--i:7"><b>7</b></span>
+                <span style="--i:8"><b>8</b></span>
+                <span style="--i:9"><b>9</b></span>
+                <span style="--i:10"><b>10</b></span>
+                <span style="--i:11"><b>11</b></span>
+            </div>
+            <div class="digital" id="time">
+                <div id="hour" style="--clr:#04fc43;"></div>
+                <div id="minutes" style="--clr:#fee800;"></div>
+                <div id="seconds" style="--clr:#ff2972;"></div>
+                <div id="asym" style="--clr:#fff;"></div>
+            </div>
+            <div class="inf">
+              <span class="bulle">vous</span>
+              <span class="bulle">pouvez</span>
+              <span class="bulle"> se </span>
+              <span class="bulle">  servir </span>
+              <span class="bulle"> de  </span>
+              <span class="bulle"> cette </span>
+              <span class="bulle"> montre </span>
+            </div>
+        </div>
+      </div>
+     </section>
+     <section class="taches-section" id="taches">
+           <div class="tabs">
+              <div
+              role="tablist"
+              aria-label="tabs component"
+              class="tabs-btn-container" >
+                  <button
+                   role="tab"
+                    aria-controls="panel-1"
+                    id="tab-1"
+                    type="button"
+                    aria-selected="true"
+                    tabindex="0"
+                    class="tab active-tab">
+                    Nouvelles tâches 🚀
+                    <span></span>
+                   </button>
+                   <button
+                     role="tab"
+                     aria-controls="panel-2"
+                     id="tab-2"
+                     type="button"
+                     aria-selected="false"
+                     tabindex="-1"
+                      class="tab" >
+                      Tâches terminés 🧪
+                      <span></span>
+                   </button>
+                    <button
+                     role="tab"
+                     aria-controls="panel-3"
+                     id="tab-3"
+                     type="button"
+                     aria-selected="false"
+                     tabindex="-1"
+                     class="tab">
+                     les tâches dont leurs temp d'execution est epusé 🍉
+                     <span></span>
+                   </button>
+              </div>
+                <div
+                 id="panel-1"
+                 role="tabpanel"
+                 tabindex="0"
+                 aria-labelledby="tab-1"
+                 class="tab-content active-tab-content">
+                  <h3>nouvelles tâches 🚀</h3>
+                  <div class="nouvelle-tache" id="tacheparent"></div>
+              </div>
+              <div
+                 id="panel-2"
+                 role="tabpanel"
+                 tabindex="0"
+                  aria-labelledby="tab-2"
+                  class="tab-content">
+                 <h3>tâches téminé. 🧪</h3>
+                 <div class="tache-temine" id="tacheparent"></div>
+              </div>
+               <div
+                id="panel-3"
+                  role="tabpanel"
+                  tabindex="0"
+                 aria-labelledby="tab-3"
+                 class="tab-content" >
+                 <h3>les tâches dont leur temps d'execution est teminé. 🍉</h3>
+                 <div class="tache-temp-temine" id="tacheparent"></div>
+               </div>
+           </div>
+     </section>
+     <section class=" ajouter-section" id="ajouter">
+      <div class="ajouter-info">
+        
+      </div>
+        <div class="box">
+            <span class="borderline"></span>
+            <form>
+                <h2>Ajouter une tâche</h2>
+                <div class="inputBox">
+                    <label for="noms">nom</label>
+                    <input type="text" required="required" id="noms" name="noms">
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <label for="times">heure</label>
+                    <input type="time"  required="required"  name="times" id="times">
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <label for="dates">Date</label>
+                    <input type="date" id="dates" required="required" name="dates" >
+                    <i></i>
+                </div>
+                   <div class="actions">
+                    <div class="container">
+                        <button type="submit" class="ajouter" id="btn" >ajouter</button> 
+                        <div class="popup">
+                          <img src="/image/signal.png" alt="">
+                          <h2 class="info-alert"></h2>
+                          <p class="info-detail"></p>
+                          <button type="submit" onclick="closepopup();">ok</button>
+                        </div> 
+                      </div>
+                </div>
+            </form>
+        </div>
+     </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <title>Document</title>
+  <script src="style.js"> </script>
+</body>
+</html>
