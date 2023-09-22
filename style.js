@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
    const tabs=[...document.querySelectorAll(".tab")];
     
    const divtab=[...document.querySelectorAll("#tacheparent")]
-   console.log(divtab)
+ 
     for(var i=0 ; i<tabs.length;i++){
       var spane=tabs[i].querySelector("span");
       var nombretache= compterTache(divtab[i]);
